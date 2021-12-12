@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      PROFILE FORM
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button [routerLink]="['/profile']" slot="end">
+    <ion-icon name="person-circle-outline"></ion-icon>
+  </ion-button>
+
+  <ion-input value="" readonly>Firstname</ion-input>
+  <ion-input value="" readonly>Lastname</ion-input>
+  <ion-input value="" readonly>Email</ion-input>
+  
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PROFILE</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+  <div [formGroup]="profileForm" (ngSubmit)="submitProfileForm(profileForm.value)" #myform="ngForm">
+    <ion-list>
+      <ion-item>
+          <ion-label position="floating">Firstname</ion-label>
+          <ion-input type="text" class="form-control" id="firstname" value="{{currentUserMeta.firstname}}" formControlName="firstname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Lastname</ion-label>
+        <ion-input type="text" class="form-control" id="lastname"  formControlName='lastname'value="{{currentUserMeta.lastname}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" class="form-control" id="email" value="{{currentUserMeta.email}}" formControlName="email"></ion-input>
+  </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+  </ion-item>
+  </ion-list>
+   <ion-input type="hidden" formControlName="id"></ion-input>
+    <ion-button type="submit">Update</ion-button>
+  </div>
+
+</ion-content>
